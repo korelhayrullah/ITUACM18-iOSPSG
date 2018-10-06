@@ -33,7 +33,7 @@ The aim of this study group is to learn the foundamentals of Swift programming l
 | Week 10 (19/12/18) | Tic Tac Toe - Implementing online functionalities using Firebase Firestore |
 | Week 11 (26/12/18) | Tic Tac Toe - Finalizing project                             |
 
-<center><b>Lessons will be around 1:30 - 2 hours</b></center>
+<p align="center"><b>Lessons will be around 1:30 - 2 hours</b></p>
 
 ### References - Readings
 
