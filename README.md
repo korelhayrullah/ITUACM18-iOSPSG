@@ -26,7 +26,7 @@ The aim of this study group is to learn the foundamentals of Swift programming l
 | Week 3 (31/10/18)  | Swift Foundamentals (enumerations, structs and classes, inheritance) |
 | Week 4 (07/11/18)  | Mid-Break (Holiday)                                          |
 | Week 5 (14/11/18)  | Swift Foundamentals (extensions, protocols, generics) - WarmUp Project |
-| Week 6 (21/11/18)  | Tic Tac Toe - Setting up the project. Implementing the project's sceleton screens, game board and its functionalities |
+| Week 6 (21/11/18)  | Tic Tac Toe - Setting up the project. Implementing the project'skeleton screens, game board and its functionalities |
 | Week 7 (28/11/18)  | Tic Tac Toe - Implementing the game engine (checking board status, turn mechanism, random playing opponent) |
 | Week 8 (05/12/18)  | Tic Tac Toe - Implementing a custom alert controller and storing player and game info to the local storage. |
 | Week 9 (12/12/18)  | Tic Tac Toe - Implementing the screen where online rooms will be shown and created |
