@@ -58,7 +58,7 @@ The aim of this study group is to learn the foundamentals of Swift programming l
 - [Protocols](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html)
 - [Generics](https://docs.swift.org/swift-book/LanguageGuide/Generics.html)
 
-######Additional Readings
+###### Additional Readings
 
 [Firebase](https://firebase.google.com/)
 
