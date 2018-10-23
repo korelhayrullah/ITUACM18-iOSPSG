@@ -21,8 +21,8 @@ The aim of this study group is to learn the foundamentals of Swift programming l
 
 | Week               | Topic                                                        |
 | :----------------- | ------------------------------------------------------------ |
-| Week 1 (24/10/18)  | Swift Foundamentals (basics, basic operators, collection types, control flow, functions, enumerations) |
-| Week 2 (31/10/18)  | Swift Foundamentals (structs, classes, inheritance, extensions, protocols, generics) |
+| Week 1 (24/10/18)  | Swift Fundamentals (basics, basic operators, collection types, control flow, functions, enumerations) |
+| Week 2 (31/10/18)  | Swift Fundamentals (structs, classes, inheritance, extensions, protocols, generics) |
 | Week 3 (07/11/18)  | Mid-Break (Holiday)                                          |
 | Week 4 (14/11/18)  | Warm up project - Setting GitHub, exploring Xcode environment, http requests, JSON parsing and table views |
 | Week 5 (21/11/18)  | Notes - Setting up the project, creating, editing and showing notes in a table view |
