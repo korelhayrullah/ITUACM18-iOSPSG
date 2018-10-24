@@ -15,7 +15,7 @@
 
 ### Goal
 
-The aim of this study group is to learn the foundamentals of Swift programming language, XCode environment, creating iOS applications, integrating API's and CocoaPods and finally tracking the creation progress using GitHub version control system. By the end of this course, students will have the foundamental knowledge to develop desired iOS applications and a general opinion where to go next.
+The aim of this study group is to learn the fundamentals of Swift programming language, XCode environment, creating iOS applications, integrating API's and CocoaPods and finally tracking the creation progress using GitHub version control system. By the end of this course, students will have the fundamental knowledge to develop desired iOS applications and a general opinion where to go next.
 
 ### Syllabus
 
