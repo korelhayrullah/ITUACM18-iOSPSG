@@ -22,6 +22,7 @@ class SearchViewController: UIViewController {
     super.viewDidLoad()
     searchTextField.delegate = self
     stackViewTopConstraint = stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0)
+    searchBtn.layer.cornerRadius = 4
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -47,8 +48,8 @@ class SearchViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let cityName = sender as? String else { return }
     
-    if segue.identifier == "ResultsViewControllerSegue" {
-      if let resultsViewController = segue.destination as? ResultsViewController {
+    if segue.identifier == "ResultsTableViewControllerSegue" {
+      if let resultsViewController = segue.destination as? ResultsTableViewController {
         resultsViewController.city = cityName
       }
     }
@@ -63,7 +64,7 @@ class SearchViewController: UIViewController {
     
     
     if trimmedText.count != 0 {
-      performSegue(withIdentifier: "ResultsViewControllerSegue", sender: trimmedText)
+      performSegue(withIdentifier: "ResultsTableViewControllerSegue", sender: trimmedText)
     } else {
       let alert = UIAlertController(title: "Upss!",
                                     message: "Fields cannot be empty!",
