@@ -8,21 +8,26 @@
 
 import UIKit
 
+import UIKit
+
 class SearchViewController: UIViewController {
   // MARK: -Properties
-  @IBOutlet weak var weatherForecastLabel: UILabel!
   @IBOutlet weak var searchTextField: UITextField!
-  @IBOutlet weak var searchBtn: UIButton!
-  @IBOutlet weak var stackView: UIStackView!
   @IBOutlet var stackViewCenterYConstraint: NSLayoutConstraint!
+  @IBOutlet weak var stackView: UIStackView!
+  @IBOutlet weak var searchButton: UIButton!
   private var stackViewTopConstraint: NSLayoutConstraint!
   
   // MARK: -Methods
   override func viewDidLoad() {
     super.viewDidLoad()
     searchTextField.delegate = self
-    stackViewTopConstraint = stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0)
-    searchBtn.layer.cornerRadius = 4
+    configureUI()
+  }
+  
+  private func configureUI() {
+    searchButton.layer.cornerRadius = 4
+    stackViewTopConstraint = stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8)
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,47 +43,34 @@ class SearchViewController: UIViewController {
       stackViewCenterYConstraint.isActive = true
     }
     
-    UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: .curveEaseOut, animations: { [unowned self] in
-      // unowned self is used here to avoid capturing the self object
-      // causing a strong relationship which results in memory leaks
+    UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.6, options: .curveEaseOut, animations: { [unowned self] in
       self.view.layoutIfNeeded()
-    }, completion: nil)
+      }, completion: nil)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let cityName = sender as? String else { return }
-    
-    if segue.identifier == "ResultsTableViewControllerSegue" {
-      if let resultsViewController = segue.destination as? ResultsTableViewController {
-        resultsViewController.city = cityName
+    if segue.identifier == "WeatherResultsTableViewControllerSegue" {
+      if let weatherResultsTableViewController = segue.destination as? WeatherResultsTableViewController {
+        weatherResultsTableViewController.cityName = cityName
       }
     }
   }
   
-  // MARK: -Actions
+  // MARK: -Action
   @IBAction func searchButtonPressed(_ sender: UIButton) {
-    view.endEditing(true)
     guard let text = searchTextField.text else { return }
-    
     let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
     
-    
     if trimmedText.count != 0 {
-      performSegue(withIdentifier: "ResultsTableViewControllerSegue", sender: trimmedText)
+      performSegue(withIdentifier: "WeatherResultsTableViewControllerSegue", sender: trimmedText)
     } else {
-      let alert = UIAlertController(title: "Upss!",
-                                    message: "Fields cannot be empty!",
-                                    preferredStyle: .alert)
-      
-      let alertAction = UIAlertAction(title: "Ups!",
-                                      style: .default,
-                                      handler: nil)
-      
+      let alert = UIAlertController(title: "Hey", message: "Fields cannot be left blank!", preferredStyle: .alert)
+      let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil  )
       alert.addAction(alertAction)
       present(alert, animated: true, completion: nil)
-      
     }
-    // clear text field
+    
     searchTextField.text = ""
   }
 }
@@ -92,7 +84,9 @@ extension SearchViewController: UITextFieldDelegate {
   func textFieldDidEndEditing(_ textField: UITextField) {
     snapStackViewToTop(snap: false)
   }
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    searchButton.sendActions(for: .touchUpInside)
+    return true
+  }
 }
-
-
-
