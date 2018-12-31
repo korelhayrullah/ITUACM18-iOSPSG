@@ -4,6 +4,12 @@ This warm up project contains a simple UI for searching weather forecasts for th
 
 *The API that this project uses: <https://openweathermap.org/api>*
 
+### Screenshots
+
+![Search](./Assets/Search.png)
+
+![Resutls](./Assets/Resutls.png)
+
 
 
 ###### Topics to read
