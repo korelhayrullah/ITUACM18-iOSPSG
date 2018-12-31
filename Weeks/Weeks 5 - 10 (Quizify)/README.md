@@ -4,17 +4,17 @@ This project aims to give an opinion to students to demonstrate how a simple app
 
 ### Screenshots
 
-![Login:SignUp](./assets/Login:SignUp.png)
+![Login:SignUp](./Assets/Login:SignUp.png)
 
-![Main](./assets/Main.png)
+![Main](./Assets/Main.png)
 
-![Quiz](./assets/Quiz.png)
+![Quiz](./Assets/Quiz.png)
 
-![QuizResults](./assets/QuizResults.png)
+![QuizResults](./Assets/QuizResults.png)
 
-![AddQuestion](./assets/AddQuestion.png)
+![AddQuestion](./Assets/AddQuestion.png)
 
-![Leaderboard](./assets/Leaderboard.png)
+![Leaderboard](./Assets/Leaderboard.png)
 
 
 
@@ -22,7 +22,7 @@ This project aims to give an opinion to students to demonstrate how a simple app
 
 In order to make the project work, first you have to create a [new](https://console.firebase.google.com/) firebase project for iOS and drag the GoogleService-Info.plist file like shown in the figure below with the red arrow.
 
-![XCode](./assets/XCode.png)
+![XCode](./Assets/XCode.png)
 
 ###### Pods used in this project
 
